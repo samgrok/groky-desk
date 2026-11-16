@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T19:22:10+01:00",
+ "generated_at": "2026-11-16T19:42:02+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -41,13 +41,13 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T19:22:10+01:00",
-  "tokens_scanned": 134,
+  "at": "2026-11-16T19:42:02+01:00",
+  "tokens_scanned": 130,
   "passed": 0,
   "rejections": {
-   "liquidité < 500 k$": 101,
-   "volume 1 h < 50 k$": 29,
-   "pas de signal momentum (baisse 1 h/6 h ou plus de vendeurs)": 4
+   "liquidité < 500 k$": 96,
+   "pas de signal momentum (baisse 1 h/6 h ou plus de vendeurs)": 4,
+   "volume 1 h < 50 k$": 30
   },
   "candidates": [],
   "note": null
@@ -56,8 +56,8 @@
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 134 tokens et de gr3g : aucun signal d'entrée, aucun trade",
-   "at": "2026-11-16T19:22:10+01:00",
+   "last_action": "Scan de 130 tokens et de gr3g : aucun signal d'entrée, aucun trade",
+   "at": "2026-11-16T19:42:02+01:00",
    "status": "en veille"
   },
   "radar": {
@@ -66,7 +66,7 @@
    "last_action": "Scan X + suivi gr3g",
    "at": "2026-11-16T19:15:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
-   "status": "actif"
+   "status": "en veille"
   },
   "garde": {
    "name": "Garde",
