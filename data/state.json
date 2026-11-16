@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T18:54:34+01:00",
+ "generated_at": "2026-11-16T19:16:05+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -53,7 +53,7 @@
    "name": "Radar",
    "role": "Veille X, signaux, copy-trade gr3g",
    "last_action": "Scan X + suivi gr3g",
-   "at": "2026-11-16T18:40:00+01:00",
+   "at": "2026-11-16T19:15:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
    "status": "actif"
   },
