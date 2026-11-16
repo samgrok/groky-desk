@@ -244,12 +244,14 @@ const ICON = {
   radar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6-6"/></svg>',
   garde: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke-linecap="round"/></svg>',
   stratege: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 20V11M10 20V5M16 20v-6M22 20H2"/></svg>',
+  sniper: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg>',
 };
 const AG = [
   { k: 'groky', name: 'Groky', c: '#FF4500', sg: 'momentum · exécution' },
   { k: 'radar', name: 'Radar', c: '#8A2BE2', sg: 'veille X · DIP' },
   { k: 'garde', name: 'Garde', c: '#00CED1', sg: 'risque · sécurité' },
   { k: 'stratege', name: 'Stratège', c: '#32CD32', sg: 'performance' },
+  { k: 'sniper', name: 'Sniper', c: '#FF2D95', sg: 'entrée retardée · PAPIER' },
 ];
 const sparks = {}; // k -> {canvas, series, born}
 function agentData(k) {
@@ -282,6 +284,17 @@ function agentData(k) {
       pct: ls && ls.tokens_scanned ? rej / ls.tokens_scanned * 100 : null, pl: 'filtrés', pctNoSign: true,
       ring: v.length ? `${ok}/${v.length}` : DASH, frac: v.length ? ok / v.length : 0, rl: 'validés',
       series: S.scans.slice(-60).map(s => s.rejected) };
+  }
+  if (k === 'sniper') {
+    const sn = st.sniper; if (!sn) return { ...base, chip: DASH, pct: null, pl: 'réussite papier', pctNoSign: true, ring: DASH, frac: 0, rl: 'positions', series: [] };
+    const ss = sn.stats || {}, sl = sn.last_scan || {}, maxp = 3, op = ss.open ?? 0;
+    let c2 = 0; const ser2 = (sn.recent_closed || []).filter(d => d.pnl_usd != null).slice().reverse().map(d => (c2 += d.pnl_usd));
+    const pnl = (ss.realized_pnl_usd ?? 0) + (ss.unrealized_pnl_usd ?? 0);
+    return { ...base,
+      chip: ss.closed || op ? `PnL papier ${fmtSignedUsd(pnl)}` : (sl.in_window != null ? `${sl.in_window} migrés · ${sl.passed || 0} retenu${(sl.passed || 0) > 1 ? 's' : ''}` : DASH),
+      pct: ss.win_rate ?? null, pl: 'réussite papier', pctNoSign: true,
+      ring: `${op}/${maxp}`, frac: op / maxp, rl: 'positions',
+      series: ser2.length ? [0, ...ser2] : [] };
   }
   const ct = closedTrades() || [];
   let cum = 0; const ser = ct.filter(d => d.pnl != null).reverse().map(d => (cum += d.pnl));
@@ -320,7 +333,7 @@ function renderAgents() {
     const sp = sparks[a.k]; if (sp.series.length < 2 && d.series.length >= 2) sp.born = performance.now(); sp.series = d.series;
   }
   const st = S.state;
-  $('agentsSub').textContent = st ? `4 agents · ${active} actif${active > 1 ? 's' : ''}` : '4 agents · —';
+  $('agentsSub').textContent = st ? `${AG.length} agents · ${active} actif${active > 1 ? 's' : ''}` : `${AG.length} agents · —`;
   const t = totals(); $('multPill').textContent = t ? nf(t.total / S.base.usd, 2) + '×' : DASH;
   const g = st?.agents?.groky; const on = g && minsAgo(g.at) <= 35;
   $('autoPill').classList.toggle('on', !!on); $('autoTxt').textContent = on ? 'ON' : DASH;

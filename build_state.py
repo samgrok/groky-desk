@@ -232,6 +232,7 @@ def main():
     manual = load_json(os.path.join(TR, "agents.json"), {}) or {}
     garde = load_json("/workspace/garde/state.json", {}) or {}
     strat = load_json("/workspace/stratege/state.json", {}) or {}
+    sniper = load_json("/workspace/sniper/state.json", {}) or {}
 
     last_scan = None
     if isinstance(last_scan_raw, dict):
@@ -293,6 +294,8 @@ def main():
                   "at": to_iso(pick(garde, "at")) or (garde_last["at"] if garde_last else None)},
         "stratege": {"name": "Stratège", "role": "Performance, revue hebdo",
                      "last_action": pick(strat, "last_action"), "at": to_iso(pick(strat, "at"))},
+        "sniper": {"name": "Sniper", "role": "Entrée retardée après migration pump.fun · PAPIER",
+                   "last_action": pick(sniper, "last_action"), "at": to_iso(pick(sniper, "at"))},
     }
     for k, v in manual.items():
         if k in agents and isinstance(v, dict):
@@ -324,6 +327,11 @@ def main():
         "last_scan": last_scan,
         "agents": agents,
         "signals": signals[:50],
+        "sniper": ({"mode": sniper.get("mode"), "stats": sniper.get("stats"),
+                    "last_scan": {k: (sniper.get("last_scan") or {}).get(k) for k in
+                                  ("at", "in_window", "passed", "rejections", "migrations_seen_65min")},
+                    "open_positions": sniper.get("open_positions") or [],
+                    "recent_closed": sniper.get("recent_closed") or []} if sniper else None),
         "tracked_wallets": [{"name": w.get("name"), "address": w.get("address")} for w in radar.get("tracked_wallets", []) or []],
         "token_accounts": [{"account": a["account"], "mint": a["mint"], "program": a["program"]} for a in accounts],
         "token_accounts_source": source,
