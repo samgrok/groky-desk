@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T23:07:40+01:00",
+ "generated_at": "2026-11-16T23:20:33+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -52,7 +52,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1408,
    "amount_tokens": null,
-   "peak_price_usd": 0.01553,
+   "peak_price_usd": 0.01572,
    "half_sold": false,
    "signal": "manuel",
    "pair_url": null
@@ -78,7 +78,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1397,
    "amount_tokens": null,
-   "peak_price_usd": 0.0009021,
+   "peak_price_usd": 0.0009089,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -130,7 +130,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1409,
    "amount_tokens": null,
-   "peak_price_usd": 0.00562777,
+   "peak_price_usd": 0.00579,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -257,14 +257,13 @@
   "realized_pnl_usd": -3.76
  },
  "last_scan": {
-  "at": "2026-11-16T23:07:40+01:00",
-  "tokens_scanned": 135,
+  "at": "2026-11-16T23:20:32+01:00",
+  "tokens_scanned": 137,
   "passed": 0,
   "rejections": {
-   "liquidité < 150 k$": 81,
+   "liquidité < 150 k$": 83,
    "volume 1 h < 20 k$": 43,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 8,
-   "token de moins de 3 h": 1,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 9,
    "déjà en portefeuille": 1,
    "wallet hors pool > 15 % de l'offre": 1
   },
@@ -275,8 +274,8 @@
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 135 tokens : 8/8 positions, aucun stop ni prise de profit, pas de place pour un nouvel achat",
-   "at": "2026-11-16T23:07:40+01:00",
+   "last_action": "Scan de 137 tokens : 8/8 positions, aucun stop ni prise de profit, pas de place pour un nouvel achat",
+   "at": "2026-11-16T23:20:32+01:00",
    "status": "actif",
    "max_positions": 8
   },
@@ -305,8 +304,8 @@
   "sniper": {
    "name": "Sniper",
    "role": "Entrée retardée après migration pump.fun · PAPIER",
-   "last_action": "Scan : 44 migrés 5-60 min, 0 retenu(s)",
-   "at": "2026-11-16T22:59:18+01:00",
+   "last_action": "Scan : 35 migrés 5-60 min, 0 retenu(s)",
+   "at": "2026-11-16T23:19:39+01:00",
    "status": "actif"
   }
  },
@@ -443,15 +442,14 @@
    "paused": false
   },
   "last_scan": {
-   "at": "2026-11-16T22:59:18+01:00",
-   "in_window": 44,
+   "at": "2026-11-16T23:19:39+01:00",
+   "in_window": 35,
    "passed": 0,
    "rejections": {
-    "liquidité < 20 k$": 41,
-    "curve remplie par très peu de trades (bundle probable)": 1,
-    "déjà > +300 % depuis migration": 2
+    "liquidité < 20 k$": 32,
+    "déjà > +300 % depuis migration": 3
    },
-   "migrations_seen_65min": 163
+   "migrations_seen_65min": 159
   },
   "open_positions": [],
   "recent_closed": [
