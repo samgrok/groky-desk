@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:34:56+01:00",
+ "generated_at": "2026-11-16T22:47:49+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -78,7 +78,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1397,
    "amount_tokens": null,
-   "peak_price_usd": 0.00090146,
+   "peak_price_usd": 0.0009021,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -108,9 +108,33 @@
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
+  },
+  {
+   "symbol": "DacityCoin",
+   "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
+   "opened_at": "2026-11-16T22:48:00+01:00",
+   "entry_price_usd": 0.00566161,
+   "entry_usd": 10.0,
+   "entry_sol": 0.1409,
+   "amount_tokens": null,
+   "peak_price_usd": 0.00566161,
+   "half_sold": false,
+   "signal": "momentum",
+   "pair_url": null
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-16T22:48:00+01:00",
+   "action": "BUY",
+   "token": "DacityCoin",
+   "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
+   "amount_sol": 0.1409,
+   "price_usd": 0.00566161,
+   "value_usd": 10.0,
+   "signature": "5JKXzHFbhL4mX1ixLPNJxXV4ca9yMFuYDGcrMMQTzrWdSozUvoLYjwqkGxqtEzgNbRdzeyEUShnr4E3SPUMN4u8Q",
+   "reason": "MOMENTUM: +40.3% 1h / +38.6% 6h / acheteurs 2507>1601; liq 342k$; v1h 612k$; mint+freeze revoques (Helius); top holder hors pool 3.0%; simulation Phantom OK; impact ~0.3%"
+  },
   {
    "date": "2026-11-16T22:35:00+01:00",
    "action": "SELL",
@@ -201,7 +225,7 @@
   }
  ],
  "stats": {
-  "trades": 8,
+  "trades": 9,
   "closed": 1,
   "wins": 0,
   "losses": 1,
@@ -209,22 +233,22 @@
   "realized_pnl_usd": -3.76
  },
  "last_scan": {
-  "at": "2026-11-16T22:34:56+01:00",
+  "at": "2026-11-16T22:47:49+01:00",
   "tokens_scanned": 138,
   "passed": 1,
   "rejections": {
-   "volume 1 h < 20 k$": 44,
-   "liquidité < 150 k$": 83,
+   "volume 1 h < 20 k$": 41,
    "pas de momentum (baisse 1 h ou plus de vendeurs)": 8,
+   "liquidité < 150 k$": 85,
    "token de moins de 3 h": 1,
    "déjà en portefeuille": 1,
-   "impact / slippage > 3 %": 1
+   "wallet hors pool > 15 % de l'offre": 1
   },
   "candidates": [
    {
     "symbol": "DacityCoin",
     "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
-    "reason": "momentum — écarté : impact estimé ~4,8 % > 3 %"
+    "reason": "momentum — acheté"
    }
   ],
   "note": null
@@ -233,18 +257,18 @@
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Stop-loss Dacity (−37,6 %, −3,76 $) ; DacityCoin écarté (impact > 3 %, pump vertical) ; 6/8 positions",
-   "at": "2026-11-16T22:34:56+01:00",
+   "last_action": "Achat DacityCoin (~10 $, signal momentum) ; 7/8 positions",
+   "at": "2026-11-16T22:47:49+01:00",
    "status": "actif",
    "max_positions": 8
   },
   "radar": {
    "name": "Radar",
    "role": "Veille X, signaux, copy-trade gr3g",
-   "last_action": "Scan X + suivi gr3g, sol589, g41t3r98, joecroskey, guavaguy",
-   "at": "2026-11-16T22:05:00+01:00",
-   "detail": "Dernier signal : MOMENTUM CATE (17:45)",
-   "status": "en veille"
+   "last_action": "Signal COPY-TRADE",
+   "at": "2026-11-16T22:41:20+01:00",
+   "detail": "Dernier signal : COPY-TRADE None (22:41)",
+   "status": "actif"
   },
   "garde": {
    "name": "Garde",
@@ -256,19 +280,89 @@
   "stratege": {
    "name": "Stratège",
    "role": "Performance, revue hebdo",
-   "last_action": "Mise à jour quotidienne : aucun trade fermé, 2 positions ouvertes.",
-   "at": "2026-11-16T20:59:12+01:00",
-   "status": "en veille"
+   "last_action": "Premier trade fermé : Dacity coupé au stop-loss, -3,76 $ (-37,6 %).",
+   "at": "2026-11-16T22:35:53+01:00",
+   "status": "actif"
   },
   "sniper": {
    "name": "Sniper",
    "role": "Entrée retardée après migration pump.fun · PAPIER",
-   "last_action": "Scan : 59 migrés 5-60 min, 0 retenu(s)",
-   "at": "2026-11-16T22:24:26+01:00",
+   "last_action": "Scan : 48 migrés 5-60 min, 0 retenu(s)",
+   "at": "2026-11-16T22:44:47+01:00",
    "status": "actif"
   }
  },
  "signals": [
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:41:20+01:00",
+   "to": "Garde",
+   "wallet": "sol589",
+   "detail": null
+  },
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:39:27+01:00",
+   "to": "Garde",
+   "wallet": "sol589",
+   "detail": null
+  },
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:36:35+01:00",
+   "to": "Garde",
+   "wallet": "sol589",
+   "detail": null
+  },
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:34:41+01:00",
+   "to": "Garde",
+   "wallet": "sol589",
+   "detail": null
+  },
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:33:37+01:00",
+   "to": "Garde",
+   "wallet": "sol589",
+   "detail": null
+  },
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:32:55+01:00",
+   "to": "Garde",
+   "wallet": "sol589",
+   "detail": null
+  },
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:28:14+01:00",
+   "to": "Garde",
+   "wallet": "gr3g",
+   "detail": null
+  },
   {
    "from": "Radar",
    "type": "MOMENTUM",
@@ -294,16 +388,15 @@
    "paused": false
   },
   "last_scan": {
-   "at": "2026-11-16T22:24:26+01:00",
-   "in_window": 59,
+   "at": "2026-11-16T22:44:47+01:00",
+   "in_window": 48,
    "passed": 0,
    "rejections": {
-    "liquidité < 20 k$": 56,
-    "déjà tradé": 1,
-    "déjà > +300 % depuis migration": 1,
-    "top 10 > 30 %": 1
+    "liquidité < 20 k$": 46,
+    "curve remplie par très peu de trades (bundle probable)": 1,
+    "déjà > +300 % depuis migration": 1
    },
-   "migrations_seen_65min": 167
+   "migrations_seen_65min": 169
   },
   "open_positions": [],
   "recent_closed": [
@@ -363,6 +456,11 @@
   {
    "account": "7AcVV3Ky8R4ZjMUQvwGMYamffd63QtS2Ct8WR5aNnfcE",
    "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
+   "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+  },
+  {
+   "account": "AmjNNasGW9yDRATCgyVCb7aGorydun7hEfEg3adT7XbX",
+   "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
    "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
   },
   {
