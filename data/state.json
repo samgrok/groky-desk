@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T19:16:05+01:00",
+ "generated_at": "2026-11-16T19:22:10+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -40,14 +40,25 @@
   "win_rate": null,
   "realized_pnl_usd": null
  },
- "last_scan": null,
+ "last_scan": {
+  "at": "2026-11-16T19:22:10+01:00",
+  "tokens_scanned": 134,
+  "passed": 0,
+  "rejections": {
+   "liquidité < 500 k$": 101,
+   "volume 1 h < 50 k$": 29,
+   "pas de signal momentum (baisse 1 h/6 h ou plus de vendeurs)": 4
+  },
+  "candidates": [],
+  "note": null
+ },
  "agents": {
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Aucun trade pour l'instant",
-   "at": null,
-   "status": "inconnu"
+   "last_action": "Scan de 134 tokens et de gr3g : aucun signal d'entrée, aucun trade",
+   "at": "2026-11-16T19:22:10+01:00",
+   "status": "en veille"
   },
   "radar": {
    "name": "Radar",
