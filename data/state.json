@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:56:49+01:00",
+ "generated_at": "2026-11-16T23:07:40+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -104,7 +104,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1403,
    "amount_tokens": null,
-   "peak_price_usd": 0.002492,
+   "peak_price_usd": 0.002493,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -257,48 +257,43 @@
   "realized_pnl_usd": -3.76
  },
  "last_scan": {
-  "at": "2026-11-16T22:56:49+01:00",
-  "tokens_scanned": 137,
-  "passed": 1,
+  "at": "2026-11-16T23:07:40+01:00",
+  "tokens_scanned": 135,
+  "passed": 0,
   "rejections": {
-   "volume 1 h < 20 k$": 42,
-   "liquidité < 150 k$": 83,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 9,
+   "liquidité < 150 k$": 81,
+   "volume 1 h < 20 k$": 43,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 8,
    "token de moins de 3 h": 1,
-   "déjà en portefeuille": 1
+   "déjà en portefeuille": 1,
+   "wallet hors pool > 15 % de l'offre": 1
   },
-  "candidates": [
-   {
-    "symbol": "GATO",
-    "mint": "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump",
-    "reason": "momentum — acheté"
-   }
-  ],
+  "candidates": [],
   "note": null
  },
  "agents": {
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Achat GATO (~10 $, signal momentum) ; 8/8 positions",
-   "at": "2026-11-16T22:56:49+01:00",
+   "last_action": "Scan de 135 tokens : 8/8 positions, aucun stop ni prise de profit, pas de place pour un nouvel achat",
+   "at": "2026-11-16T23:07:40+01:00",
    "status": "actif",
    "max_positions": 8
   },
   "radar": {
    "name": "Radar",
    "role": "Veille X, signaux, copy-trade gr3g",
-   "last_action": "Signal COPY-TRADE",
-   "at": "2026-11-16T22:41:20+01:00",
-   "detail": "Dernier signal : COPY-TRADE None (22:41)",
+   "last_action": "Scan X + suivi gr3g, sol589, g41t3r98, joecroskey, guavaguy",
+   "at": "2026-11-16T23:05:00+01:00",
+   "detail": "Dernier signal : DIP BUTTHOLE (23:05)",
    "status": "actif"
   },
   "garde": {
    "name": "Garde",
    "role": "Analyse de risque, valide les signaux",
-   "last_action": null,
-   "at": null,
-   "status": "inconnu"
+   "last_action": "Verdict prudence envoyé à Groky pour BUTTHOLE",
+   "at": "2026-11-16T23:08:00+01:00",
+   "status": "actif"
   },
   "stratege": {
    "name": "Stratège",
@@ -310,12 +305,40 @@
   "sniper": {
    "name": "Sniper",
    "role": "Entrée retardée après migration pump.fun · PAPIER",
-   "last_action": "Scan : 41 migrés 5-60 min, 0 retenu(s)",
-   "at": "2026-11-16T22:54:09+01:00",
+   "last_action": "Scan : 44 migrés 5-60 min, 0 retenu(s)",
+   "at": "2026-11-16T22:59:18+01:00",
    "status": "actif"
   }
  },
  "signals": [
+  {
+   "from": "Garde",
+   "type": null,
+   "symbol": null,
+   "mint": "4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump",
+   "at": "2026-11-16T23:08:00+01:00",
+   "verdict": "prudence",
+   "detail": null
+  },
+  {
+   "from": "Radar",
+   "type": "DIP",
+   "symbol": "BUTTHOLE",
+   "mint": "4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump",
+   "at": "2026-11-16T23:05:00+01:00",
+   "to": "Garde (via parent)",
+   "verdict": null
+  },
+  {
+   "from": "Radar",
+   "type": "COPY-TRADE",
+   "symbol": null,
+   "mint": "TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo",
+   "at": "2026-11-16T22:59:50+01:00",
+   "to": "Garde",
+   "wallet": "sol589",
+   "detail": null
+  },
   {
    "from": "Radar",
    "type": "COPY-TRADE",
@@ -394,6 +417,15 @@
    "at": "2026-11-16T17:45:00+01:00",
    "to": "Garde (via parent)",
    "verdict": null
+  },
+  {
+   "from": "Garde",
+   "type": null,
+   "symbol": null,
+   "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+   "at": "2026-11-16T17:45:00+01:00",
+   "verdict": "prudence",
+   "detail": null
   }
  ],
  "sniper": {
@@ -411,15 +443,15 @@
    "paused": false
   },
   "last_scan": {
-   "at": "2026-11-16T22:54:09+01:00",
-   "in_window": 41,
+   "at": "2026-11-16T22:59:18+01:00",
+   "in_window": 44,
    "passed": 0,
    "rejections": {
-    "liquidité < 20 k$": 38,
+    "liquidité < 20 k$": 41,
     "curve remplie par très peu de trades (bundle probable)": 1,
     "déjà > +300 % depuis migration": 2
    },
-   "migrations_seen_65min": 166
+   "migrations_seen_65min": 163
   },
   "open_positions": [],
   "recent_closed": [
