@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T21:27:02+01:00",
+ "generated_at": "2026-11-16T21:34:25+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -52,7 +52,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1408,
    "amount_tokens": null,
-   "peak_price_usd": 0.01317705,
+   "peak_price_usd": 0.01322,
    "half_sold": false,
    "signal": "manuel",
    "pair_url": null
@@ -65,7 +65,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1397,
    "amount_tokens": null,
-   "peak_price_usd": 0.00268071,
+   "peak_price_usd": 0.002938,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -163,37 +163,31 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T21:27:02+01:00",
-  "tokens_scanned": 136,
-  "passed": 1,
+  "at": "2026-11-16T21:34:25+01:00",
+  "tokens_scanned": 137,
+  "passed": 0,
   "rejections": {
-   "liquidité < 150 k$": 79,
-   "volume 1 h < 20 k$": 50,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 4,
+   "liquidité < 150 k$": 81,
+   "volume 1 h < 20 k$": 48,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 6,
    "déjà en portefeuille": 2
   },
-  "candidates": [
-   {
-    "symbol": "Dacity",
-    "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
-    "reason": "momentum — acheté"
-   }
-  ],
+  "candidates": [],
   "note": null
  },
  "agents": {
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Achat Dacity (~10 $, signal momentum) ; 5/5 positions",
-   "at": "2026-11-16T21:27:02+01:00",
+   "last_action": "Scan de 137 tokens et de gr3g : aucun nouveau signal, aucun stop ni prise de profit ; 5/8 positions",
+   "at": "2026-11-16T21:34:25+01:00",
    "status": "actif",
-   "max_positions": 5
+   "max_positions": 8
   },
   "radar": {
    "name": "Radar",
    "role": "Veille X, signaux, copy-trade gr3g",
-   "last_action": "Scan X + suivi gr3g",
+   "last_action": "Scan X + suivi gr3g, sol589, g41t3r98, joecroskey, guavaguy",
    "at": "2026-11-16T21:05:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
    "status": "en veille"
@@ -264,6 +258,22 @@
   {
    "name": "gr3g",
    "address": "J23qr98GjGJJqKq9CBEnyRhHbmkaVxtTJNNxKu597wsA"
+  },
+  {
+   "name": "sol589",
+   "address": "3SW1va94ZdQGyRVW7hUFj9Mt3BX3KvqCPo42zZDSApFC"
+  },
+  {
+   "name": "g41t3r98",
+   "address": "4t5cayg6FDWkyQwyuYq9DqcRRCQ7e6JXyf9J7f2wfZQW"
+  },
+  {
+   "name": "joecroskey",
+   "address": "8bXzTJq3sNkzD8T1mXVCaMvg1D3CL1heYJBgSPM8WVow"
+  },
+  {
+   "name": "guavaguy",
+   "address": "C481ZKiw4TZGs4EjNkhm6TB7s17swzmqAmCcNm73vGnW"
   }
  ],
  "token_accounts": [
