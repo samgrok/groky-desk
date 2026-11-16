@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:04:28+01:00",
+ "generated_at": "2026-11-16T22:13:24+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -52,7 +52,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1408,
    "amount_tokens": null,
-   "peak_price_usd": 0.01365,
+   "peak_price_usd": 0.01435,
    "half_sold": false,
    "signal": "manuel",
    "pair_url": null
@@ -91,7 +91,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1401,
    "amount_tokens": null,
-   "peak_price_usd": 0.002167,
+   "peak_price_usd": 0.002242,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -163,14 +163,14 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T22:04:28+01:00",
-  "tokens_scanned": 136,
+  "at": "2026-11-16T22:13:24+01:00",
+  "tokens_scanned": 135,
   "passed": 0,
   "rejections": {
-   "volume 1 h < 20 k$": 46,
    "liquidité < 150 k$": 81,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 7,
-   "déjà en portefeuille": 2
+   "volume 1 h < 20 k$": 45,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 6,
+   "déjà en portefeuille": 3
   },
   "candidates": [],
   "note": null
@@ -179,8 +179,8 @@
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 136 tokens et de gr3g : aucun nouveau signal, aucun stop ni prise de profit ; 5/8 positions",
-   "at": "2026-11-16T22:04:28+01:00",
+   "last_action": "Scan de 135 tokens et de gr3g : aucun nouveau signal, aucun stop ni prise de profit ; 5/8 positions",
+   "at": "2026-11-16T22:13:24+01:00",
    "status": "actif",
    "max_positions": 8
   },
@@ -188,9 +188,9 @@
    "name": "Radar",
    "role": "Veille X, signaux, copy-trade gr3g",
    "last_action": "Scan X + suivi gr3g, sol589, g41t3r98, joecroskey, guavaguy",
-   "at": "2026-11-16T21:05:00+01:00",
+   "at": "2026-11-16T22:05:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
-   "status": "en veille"
+   "status": "actif"
   },
   "garde": {
    "name": "Garde",
