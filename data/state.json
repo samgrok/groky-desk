@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:29:58+01:00",
+ "generated_at": "2026-11-16T22:34:56+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -52,7 +52,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1408,
    "amount_tokens": null,
-   "peak_price_usd": 0.01461,
+   "peak_price_usd": 0.01553,
    "half_sold": false,
    "signal": "manuel",
    "pair_url": null
@@ -84,19 +84,6 @@
    "pair_url": null
   },
   {
-   "symbol": "Dacity",
-   "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
-   "opened_at": "2026-11-16T21:27:00+01:00",
-   "entry_price_usd": 0.002158,
-   "entry_usd": 10.0,
-   "entry_sol": 0.1401,
-   "amount_tokens": null,
-   "peak_price_usd": 0.002726,
-   "half_sold": false,
-   "signal": "momentum",
-   "pair_url": null
-  },
-  {
    "symbol": "mihao",
    "mint": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
    "opened_at": "2026-11-16T22:31:00+01:00",
@@ -117,13 +104,24 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1403,
    "amount_tokens": null,
-   "peak_price_usd": 0.00227886,
+   "peak_price_usd": 0.002465,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-16T22:35:00+01:00",
+   "action": "SELL",
+   "token": "Dacity",
+   "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+   "amount_sol": 0.0869196,
+   "price_usd": 0.001346,
+   "value_usd": 6.24,
+   "signature": "3MeRJAgA3Zyj2o8UKFP3H5n3TxRZkvVxMxXQdT2fWKxYWyW42MEHz8sMZobg9hqwpNtvVVrwfje4fu8jAFTcEGBp",
+   "reason": "STOP-LOSS: prix x0.62 (-38%) sous le stop -20% (chute brutale entre deux runs); 4633.92 Dacity vendus pour 0.0869 SOL; perte -3.76$ (-37.6%)"
+  },
   {
    "date": "2026-11-16T22:31:00+01:00",
    "action": "BUY",
@@ -203,35 +201,30 @@
   }
  ],
  "stats": {
-  "trades": 7,
-  "closed": 0,
+  "trades": 8,
+  "closed": 1,
   "wins": 0,
-  "losses": 0,
-  "win_rate": null,
-  "realized_pnl_usd": null
+  "losses": 1,
+  "win_rate": 0.0,
+  "realized_pnl_usd": -3.76
  },
  "last_scan": {
-  "at": "2026-11-16T22:29:58+01:00",
-  "tokens_scanned": 136,
-  "passed": 2,
+  "at": "2026-11-16T22:34:56+01:00",
+  "tokens_scanned": 138,
+  "passed": 1,
   "rejections": {
-   "volume 1 h < 20 k$": 45,
-   "liquidité < 150 k$": 81,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 4,
+   "volume 1 h < 20 k$": 44,
+   "liquidité < 150 k$": 83,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 8,
    "token de moins de 3 h": 1,
-   "ni hausse 6 h ni accélération du volume": 1,
-   "déjà en portefeuille": 2
+   "déjà en portefeuille": 1,
+   "impact / slippage > 3 %": 1
   },
   "candidates": [
    {
-    "symbol": "mihao",
-    "mint": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
-    "reason": "momentum — acheté"
-   },
-   {
-    "symbol": "Macca",
-    "mint": "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump",
-    "reason": "momentum — acheté"
+    "symbol": "DacityCoin",
+    "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
+    "reason": "momentum — écarté : impact estimé ~4,8 % > 3 %"
    }
   ],
   "note": null
@@ -240,8 +233,8 @@
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Achats mihao et Macca (~10 $ chacun, signal momentum) ; 7/8 positions",
-   "at": "2026-11-16T22:29:58+01:00",
+   "last_action": "Stop-loss Dacity (−37,6 %, −3,76 $) ; DacityCoin écarté (impact > 3 %, pump vertical) ; 6/8 positions",
+   "at": "2026-11-16T22:34:56+01:00",
    "status": "actif",
    "max_positions": 8
   },
