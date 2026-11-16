@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T20:42:08+01:00",
+ "generated_at": "2026-11-16T20:59:22+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -43,9 +43,33 @@
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
+  },
+  {
+   "symbol": "GTA6",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "opened_at": "2026-11-16T20:58:00+01:00",
+   "entry_price_usd": 0.012921,
+   "entry_usd": 10.0,
+   "entry_sol": 0.1408,
+   "amount_tokens": null,
+   "peak_price_usd": 0.012921,
+   "half_sold": false,
+   "signal": "manuel",
+   "pair_url": null
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-16T20:58:00+01:00",
+   "action": "BUY",
+   "token": "GTA6",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "amount_sol": 0.1408,
+   "price_usd": 0.012921,
+   "value_usd": 10.0,
+   "signature": "2jf5T2Et6EskhakX8tFhNPTFYw8jhJqBE67QCN226CEvuqTck5TzTVs91f2h8uWvLR1NnrFfppKKdEcLLxoe2zxW",
+   "reason": "MANUEL (demande utilisateur): hold jusqu'a la sortie de GTA 6 le 19/11; impact 2.2%; RugCheck score 1 aucun risque"
+  },
   {
    "date": "2026-11-16T20:38:40+01:00",
    "action": "BUY",
@@ -59,7 +83,7 @@
   }
  ],
  "stats": {
-  "trades": 1,
+  "trades": 2,
   "closed": 0,
   "wins": 0,
   "losses": 0,
@@ -67,30 +91,23 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T20:39:32+01:00",
-  "tokens_scanned": 134,
-  "passed": 1,
+  "at": "2026-11-16T20:59:22+01:00",
+  "tokens_scanned": 133,
+  "passed": 0,
   "rejections": {
-   "volume 1 h < 20 k$": 43,
-   "liquidité < 150 k$": 77,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 12,
-   "ni hausse 6 h ni accélération du volume": 1
+   "volume 1 h < 20 k$": 44,
+   "liquidité < 150 k$": 78,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 11
   },
-  "candidates": [
-   {
-    "symbol": "BIRB",
-    "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
-    "reason": "momentum"
-   }
-  ],
+  "candidates": [],
   "note": null
  },
  "agents": {
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Achat de 143,9 BIRB (~10 $) sur signal momentum",
-   "at": "2026-11-16T20:39:32+01:00",
+   "last_action": "Scan de 133 tokens et de gr3g : aucun nouveau signal ; BIRB et GTA6 suivies, aucune sortie déclenchée",
+   "at": "2026-11-16T20:59:22+01:00",
    "status": "actif",
    "max_positions": 5
   },
@@ -100,7 +117,7 @@
    "last_action": "Scan X + suivi gr3g",
    "at": "2026-11-16T20:38:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
-   "status": "actif"
+   "status": "en veille"
   },
   "garde": {
    "name": "Garde",
@@ -112,15 +129,15 @@
   "stratege": {
    "name": "Stratège",
    "role": "Performance, revue hebdo",
-   "last_action": "Journal et positions lus : aucun trade enregistré pour l'instant",
-   "at": "2026-11-16T20:26:41+01:00",
+   "last_action": "Mise à jour quotidienne : aucun trade fermé, 2 positions ouvertes.",
+   "at": "2026-11-16T20:59:12+01:00",
    "status": "actif"
   },
   "sniper": {
    "name": "Sniper",
    "role": "Entrée retardée après migration pump.fun · PAPIER",
-   "last_action": "Scan : 46 migrés 5-60 min, 0 retenu(s)",
-   "at": "2026-11-16T20:40:44+01:00",
+   "last_action": "Scan : 38 migrés 5-60 min, 0 retenu(s)",
+   "at": "2026-11-16T20:58:32+01:00",
    "status": "actif"
   }
  },
@@ -150,15 +167,16 @@
    "paused": false
   },
   "last_scan": {
-   "at": "2026-11-16T20:40:44+01:00",
-   "in_window": 46,
+   "at": "2026-11-16T20:58:32+01:00",
+   "in_window": 38,
    "passed": 0,
    "rejections": {
-    "liquidité < 20 k$": 39,
-    "déjà > +300 % depuis migration": 6,
-    "volume 5 min < 5 k$": 1
+    "curve remplie par très peu de trades (bundle probable)": 1,
+    "liquidité < 20 k$": 34,
+    "déjà > +300 % depuis migration": 2,
+    "insiders / bundle détectés": 1
    },
-   "migrations_seen_65min": 61
+   "migrations_seen_65min": 76
   },
   "open_positions": [],
   "recent_closed": []
@@ -173,6 +191,11 @@
   {
    "account": "3Et5YnAeWaZMQfTMc7Ya8XWQxMdpSdEKExm8kte1kDnf",
    "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
+   "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+  },
+  {
+   "account": "AnpR3PBkJ7uRnXjw43Ttz2ihtwt7gRukPBfS5Ukb2BKC",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
    "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
   },
   {
