@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T21:14:04+01:00",
+ "generated_at": "2026-11-16T21:14:16+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -141,27 +141,23 @@
  "last_scan": {
   "at": "2026-11-16T21:14:04+01:00",
   "tokens_scanned": 137,
-  "passed": 3,
+  "passed": 2,
   "rejections": {
    "liquidité < 150 k$": 80,
    "volume 1 h < 20 k$": 49,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 5
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 5,
+   "un wallet hors pool > 15 % de l'offre": 1
   },
   "candidates": [
    {
     "symbol": "FLOAT",
     "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
-    "reason": "momentum"
+    "reason": "momentum — acheté"
    },
    {
     "symbol": "fone",
     "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
-    "reason": "momentum"
-   },
-   {
-    "symbol": "PUMP",
-    "mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
-    "reason": "momentum"
+    "reason": "momentum — acheté"
    }
   ],
   "note": null
