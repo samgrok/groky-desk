@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:13:24+01:00",
+ "generated_at": "2026-11-16T22:29:58+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -52,7 +52,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1408,
    "amount_tokens": null,
-   "peak_price_usd": 0.01435,
+   "peak_price_usd": 0.01461,
    "half_sold": false,
    "signal": "manuel",
    "pair_url": null
@@ -91,13 +91,61 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1401,
    "amount_tokens": null,
-   "peak_price_usd": 0.002242,
+   "peak_price_usd": 0.002726,
+   "half_sold": false,
+   "signal": "momentum",
+   "pair_url": null
+  },
+  {
+   "symbol": "mihao",
+   "mint": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+   "opened_at": "2026-11-16T22:31:00+01:00",
+   "entry_price_usd": 0.0150522,
+   "entry_usd": 10.0,
+   "entry_sol": 0.1403,
+   "amount_tokens": null,
+   "peak_price_usd": 0.0150522,
+   "half_sold": false,
+   "signal": "momentum",
+   "pair_url": null
+  },
+  {
+   "symbol": "Macca",
+   "mint": "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump",
+   "opened_at": "2026-11-16T22:31:00+01:00",
+   "entry_price_usd": 0.00227886,
+   "entry_usd": 10.0,
+   "entry_sol": 0.1403,
+   "amount_tokens": null,
+   "peak_price_usd": 0.00227886,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-16T22:31:00+01:00",
+   "action": "BUY",
+   "token": "mihao",
+   "mint": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+   "amount_sol": 0.1403,
+   "price_usd": 0.0150522,
+   "value_usd": 10.0,
+   "signature": "49iZ6WMuQknWKowgqGkF4szqGQsb82qVrPxmCnAYNGfLkMfBqrQA24HvvkZgKYwDjN3eBWCfZxX3n7FdVGLfrs6p",
+   "reason": "MOMENTUM: +0.4% 1h / acheteurs 482>377 / v1h 86k$ > moyenne 6h (acceleration); liq 423k$; mint+freeze revoques (Helius); top holder hors pool 3.2%; simulation Phantom OK; impact <0.1%"
+  },
+  {
+   "date": "2026-11-16T22:31:00+01:00",
+   "action": "BUY",
+   "token": "Macca",
+   "mint": "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump",
+   "amount_sol": 0.1403,
+   "price_usd": 0.00227886,
+   "value_usd": 10.0,
+   "signature": "4kowuhkUYk6pFnV82DY5CgFnpboPuGxbPLTMKXzHEuWgtSFDtikRdrEGmqpoxDqtw9wNQDDVxjvj8b1ao4Hg3ggw",
+   "reason": "MOMENTUM: +9.0% 1h / +36.3% 6h / acheteurs 100>87; liq 180k$; v1h 26k$; mint+freeze revoques (Helius); top holder hors pool 3.7%; simulation Phantom OK; impact ~1.2% max"
+  },
   {
    "date": "2026-11-16T21:27:00+01:00",
    "action": "BUY",
@@ -155,7 +203,7 @@
   }
  ],
  "stats": {
-  "trades": 5,
+  "trades": 7,
   "closed": 0,
   "wins": 0,
   "losses": 0,
@@ -163,24 +211,37 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T22:13:24+01:00",
-  "tokens_scanned": 135,
-  "passed": 0,
+  "at": "2026-11-16T22:29:58+01:00",
+  "tokens_scanned": 136,
+  "passed": 2,
   "rejections": {
-   "liquidité < 150 k$": 81,
    "volume 1 h < 20 k$": 45,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 6,
-   "déjà en portefeuille": 3
+   "liquidité < 150 k$": 81,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 4,
+   "token de moins de 3 h": 1,
+   "ni hausse 6 h ni accélération du volume": 1,
+   "déjà en portefeuille": 2
   },
-  "candidates": [],
+  "candidates": [
+   {
+    "symbol": "mihao",
+    "mint": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+    "reason": "momentum — acheté"
+   },
+   {
+    "symbol": "Macca",
+    "mint": "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump",
+    "reason": "momentum — acheté"
+   }
+  ],
   "note": null
  },
  "agents": {
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 135 tokens et de gr3g : aucun nouveau signal, aucun stop ni prise de profit ; 5/8 positions",
-   "at": "2026-11-16T22:13:24+01:00",
+   "last_action": "Achats mihao et Macca (~10 $ chacun, signal momentum) ; 7/8 positions",
+   "at": "2026-11-16T22:29:58+01:00",
    "status": "actif",
    "max_positions": 8
   },
@@ -190,7 +251,7 @@
    "last_action": "Scan X + suivi gr3g, sol589, g41t3r98, joecroskey, guavaguy",
    "at": "2026-11-16T22:05:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
-   "status": "actif"
+   "status": "en veille"
   },
   "garde": {
    "name": "Garde",
@@ -209,8 +270,8 @@
   "sniper": {
    "name": "Sniper",
    "role": "Entrée retardée après migration pump.fun · PAPIER",
-   "last_action": "Scan : 65 migrés 5-60 min, 0 retenu(s)",
-   "at": "2026-11-16T21:58:00+01:00",
+   "last_action": "Scan : 59 migrés 5-60 min, 0 retenu(s)",
+   "at": "2026-11-16T22:24:26+01:00",
    "status": "actif"
   }
  },
@@ -240,16 +301,16 @@
    "paused": false
   },
   "last_scan": {
-   "at": "2026-11-16T21:58:00+01:00",
-   "in_window": 65,
+   "at": "2026-11-16T22:24:26+01:00",
+   "in_window": 59,
    "passed": 0,
    "rejections": {
-    "liquidité < 20 k$": 61,
-    "déjà > +300 % depuis migration": 2,
+    "liquidité < 20 k$": 56,
     "déjà tradé": 1,
-    "risque RugCheck danger": 1
+    "déjà > +300 % depuis migration": 1,
+    "top 10 > 30 %": 1
    },
-   "migrations_seen_65min": 146
+   "migrations_seen_65min": 167
   },
   "open_positions": [],
   "recent_closed": [
@@ -314,6 +375,16 @@
   {
    "account": "DxtRnwhxt9VZ6gwMEKY3hNCDfhqBv5HsaCfENshXeEzt",
    "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+   "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+  },
+  {
+   "account": "EjMuG1FR9JR9SzLmSPZJUiUnbKNrsq8Dhs61Dw4tDR39",
+   "mint": "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump",
+   "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+  },
+  {
+   "account": "EoymsD24D6Tj8xc2jPvAjBA6L7m2hXPmD3GbkmrACTQW",
+   "mint": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
    "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
   }
  ],
