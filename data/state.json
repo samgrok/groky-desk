@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T21:43:36+01:00",
+ "generated_at": "2026-11-16T22:00:04+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -52,7 +52,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1408,
    "amount_tokens": null,
-   "peak_price_usd": 0.01328,
+   "peak_price_usd": 0.01365,
    "half_sold": false,
    "signal": "manuel",
    "pair_url": null
@@ -91,7 +91,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1401,
    "amount_tokens": null,
-   "peak_price_usd": 0.002158,
+   "peak_price_usd": 0.002167,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -163,15 +163,14 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T21:43:35+01:00",
-  "tokens_scanned": 137,
+  "at": "2026-11-16T22:00:04+01:00",
+  "tokens_scanned": 139,
   "passed": 0,
   "rejections": {
-   "volume 1 h < 20 k$": 47,
-   "liquidité < 150 k$": 80,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 8,
-   "ni hausse 6 h ni accélération du volume": 1,
-   "déjà en portefeuille": 1
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 5,
+   "liquidité < 150 k$": 84,
+   "volume 1 h < 20 k$": 48,
+   "déjà en portefeuille": 2
   },
   "candidates": [],
   "note": null
@@ -180,8 +179,8 @@
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 137 tokens et de gr3g : aucun nouveau signal ; FLOAT à x1,28, aucun stop ni prise de profit ; 5/8 positions",
-   "at": "2026-11-16T21:43:35+01:00",
+   "last_action": "Scan de 139 tokens et de gr3g : aucun nouveau signal, aucun stop ni prise de profit ; 5/8 positions",
+   "at": "2026-11-16T22:00:04+01:00",
    "status": "actif",
    "max_positions": 8
   },
@@ -210,8 +209,8 @@
   "sniper": {
    "name": "Sniper",
    "role": "Entrée retardée après migration pump.fun · PAPIER",
-   "last_action": "ENTRÉE $SENT @ 0.000104 $ (5 $ papier) · liq 22618 $ · 1179 holders",
-   "at": "2026-11-16T21:40:35+01:00",
+   "last_action": "Scan : 65 migrés 5-60 min, 0 retenu(s)",
+   "at": "2026-11-16T21:58:00+01:00",
    "status": "actif"
   }
  },
@@ -229,46 +228,40 @@
  "sniper": {
   "mode": "PAPIER",
   "stats": {
-   "closed": 0,
+   "closed": 1,
    "wins": 0,
-   "losses": 0,
-   "win_rate": null,
-   "realized_pnl_usd": 0.0,
-   "unrealized_pnl_usd": -0.21,
-   "open": 1,
+   "losses": 1,
+   "win_rate": 0.0,
+   "realized_pnl_usd": -2.02,
+   "unrealized_pnl_usd": 0,
+   "open": 0,
    "entries_today": 1,
-   "day_pnl_usd": 0,
+   "day_pnl_usd": -2.02,
    "paused": false
   },
   "last_scan": {
-   "at": "2026-11-16T21:40:35+01:00",
-   "in_window": 67,
-   "passed": 1,
+   "at": "2026-11-16T21:58:00+01:00",
+   "in_window": 65,
+   "passed": 0,
    "rejections": {
-    "liquidité < 20 k$": 63,
-    "volume 5 min < 5 k$": 1,
-    "plus de ventes que d'achats (5 min)": 1,
-    "déjà > +300 % depuis migration": 1
+    "liquidité < 20 k$": 61,
+    "déjà > +300 % depuis migration": 2,
+    "déjà tradé": 1,
+    "risque RugCheck danger": 1
    },
-   "migrations_seen_65min": 128
+   "migrations_seen_65min": 146
   },
-  "open_positions": [
+  "open_positions": [],
+  "recent_closed": [
    {
     "symbol": "SENT",
     "mint": "3EDLvS4PMWXmN5oj7aGWwR16yC3zgZSdWL2BeVK8sent",
     "url": "https://dexscreener.com/solana/hxcnarqjosxb89frvfifpesmra9z7qp9nnbnhe6toanu",
     "entry_at": "2026-11-16T21:40:35+01:00",
-    "entry_price": 0.000104,
-    "last_price": null,
-    "peak": 0.000104,
-    "tp1": false,
-    "tp2": false,
-    "cost_usd": 5.0,
-    "qty_left": 47067.30769230769,
-    "pnl_pct": 0.0
+    "closed_at": "2026-11-16T21:54:44+01:00",
+    "pnl_usd": -2.0196
    }
-  ],
-  "recent_closed": []
+  ]
  },
  "tracked_wallets": [
   {
