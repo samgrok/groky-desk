@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T20:21:32+01:00",
+ "generated_at": "2026-11-16T20:39:32+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -30,10 +30,36 @@
    "COPY-TRADE"
   ]
  },
- "positions": [],
- "journal": [],
+ "positions": [
+  {
+   "symbol": "BIRB",
+   "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
+   "opened_at": "2026-11-16T20:38:40+01:00",
+   "entry_price_usd": 0.06949,
+   "entry_usd": 10.0,
+   "entry_sol": 0.1408,
+   "amount_tokens": null,
+   "peak_price_usd": 0.06949,
+   "half_sold": false,
+   "signal": "momentum",
+   "pair_url": null
+  }
+ ],
+ "journal": [
+  {
+   "date": "2026-11-16T20:38:40+01:00",
+   "action": "BUY",
+   "token": "BIRB",
+   "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
+   "amount_sol": 0.1408,
+   "price_usd": 0.06949,
+   "value_usd": 10.0,
+   "signature": "2wqBTa4RiS6MUvJsxTu6wKLhFJi3J8HqQctzeFCECVmWdaA2saPWGKhNVp85MB4x4EBwMRnK5owR9s9WtTpgTfNH",
+   "reason": "MOMENTUM: +0.2% 1h / +1.6% 6h / acheteurs 515>438 vendeurs; liq 1.56M$; mint+freeze revoques; simulation Phantom OK; impact 0.05%"
+  }
+ ],
  "stats": {
-  "trades": 0,
+  "trades": 1,
   "closed": 0,
   "wins": 0,
   "losses": 0,
@@ -41,30 +67,38 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T20:21:32+01:00",
-  "tokens_scanned": 132,
-  "passed": 0,
+  "at": "2026-11-16T20:39:32+01:00",
+  "tokens_scanned": 134,
+  "passed": 1,
   "rejections": {
-   "liquidité < 500 k$": 98,
-   "volume 1 h < 50 k$": 31,
-   "pas de signal momentum (baisse 1 h/6 h ou plus de vendeurs)": 3
+   "volume 1 h < 20 k$": 43,
+   "liquidité < 150 k$": 77,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 12,
+   "ni hausse 6 h ni accélération du volume": 1
   },
-  "candidates": [],
+  "candidates": [
+   {
+    "symbol": "BIRB",
+    "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
+    "reason": "momentum"
+   }
+  ],
   "note": null
  },
  "agents": {
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 132 tokens et de gr3g : aucun signal d'entrée, aucun trade",
-   "at": "2026-11-16T20:21:32+01:00",
-   "status": "en veille"
+   "last_action": "Achat de 143,9 BIRB (~10 $) sur signal momentum",
+   "at": "2026-11-16T20:39:32+01:00",
+   "status": "actif",
+   "max_positions": 5
   },
   "radar": {
    "name": "Radar",
    "role": "Veille X, signaux, copy-trade gr3g",
    "last_action": "Scan X + suivi gr3g",
-   "at": "2026-11-16T20:08:00+01:00",
+   "at": "2026-11-16T20:38:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
    "status": "actif"
   },
@@ -78,9 +112,9 @@
   "stratege": {
    "name": "Stratège",
    "role": "Performance, revue hebdo",
-   "last_action": null,
-   "at": null,
-   "status": "inconnu"
+   "last_action": "Journal et positions lus : aucun trade enregistré pour l'instant",
+   "at": "2026-11-16T20:26:41+01:00",
+   "status": "actif"
   }
  },
  "signals": [
@@ -101,6 +135,11 @@
   }
  ],
  "token_accounts": [
+  {
+   "account": "3Et5YnAeWaZMQfTMc7Ya8XWQxMdpSdEKExm8kte1kDnf",
+   "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
+   "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+  },
   {
    "account": "JMTAmXV2fLQ5brvoo6ELexmSPdJ5MRmqi8GjWisZuX5",
    "mint": "CASHx9KJUStyftLFWGvEVf59SGeG9sh5FfcnZMVPCASH",
