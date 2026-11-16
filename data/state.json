@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T20:59:22+01:00",
+ "generated_at": "2026-11-16T21:14:04+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -56,9 +56,57 @@
    "half_sold": false,
    "signal": "manuel",
    "pair_url": null
+  },
+  {
+   "symbol": "FLOAT",
+   "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+   "opened_at": "2026-11-16T21:16:00+01:00",
+   "entry_price_usd": 0.00268071,
+   "entry_usd": 10.0,
+   "entry_sol": 0.1397,
+   "amount_tokens": null,
+   "peak_price_usd": 0.00268071,
+   "half_sold": false,
+   "signal": "momentum",
+   "pair_url": null
+  },
+  {
+   "symbol": "fone",
+   "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
+   "opened_at": "2026-11-16T21:16:00+01:00",
+   "entry_price_usd": 0.00090146,
+   "entry_usd": 10.0,
+   "entry_sol": 0.1397,
+   "amount_tokens": null,
+   "peak_price_usd": 0.00090146,
+   "half_sold": false,
+   "signal": "momentum",
+   "pair_url": null
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-16T21:16:00+01:00",
+   "action": "BUY",
+   "token": "FLOAT",
+   "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+   "amount_sol": 0.1397,
+   "price_usd": 0.00268071,
+   "value_usd": 10.0,
+   "signature": "34j5Cacx9mfF5C42GN6yb2hY5GAXERenyJsM81J2tDb3sU3coSs5gCLKrVcz3EcYmzXqtMEeSWuJgefx8fNeAByN",
+   "reason": "MOMENTUM: +6.0% 1h / +4.8% 6h / acheteurs 161>150; liq 300k$; v1h 35k$; mint+freeze revoques; top holder hors pool 6.2%; devis sans echec de simulation; impact <1%"
+  },
+  {
+   "date": "2026-11-16T21:16:00+01:00",
+   "action": "BUY",
+   "token": "fone",
+   "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
+   "amount_sol": 0.1397,
+   "price_usd": 0.00090146,
+   "value_usd": 10.0,
+   "signature": "3CYAn16gWyryb6LC9ev3F7WDS4NHdTVrNLAqHYideZ3RWfR5LufbzmL6maBu5tD3usG2E7aKvrFbFmm21Ai8tCYo",
+   "reason": "MOMENTUM: +2.9% 1h / +9.2% 6h / acheteurs 112>98; liq 191k$; v1h 22k$; mint+freeze revoques; top holder hors pool 3.9%; devis sans echec de simulation; impact 0.95%"
+  },
   {
    "date": "2026-11-16T20:58:00+01:00",
    "action": "BUY",
@@ -83,7 +131,7 @@
   }
  ],
  "stats": {
-  "trades": 2,
+  "trades": 4,
   "closed": 0,
   "wins": 0,
   "losses": 0,
@@ -91,23 +139,39 @@
   "realized_pnl_usd": null
  },
  "last_scan": {
-  "at": "2026-11-16T20:59:22+01:00",
-  "tokens_scanned": 133,
-  "passed": 0,
+  "at": "2026-11-16T21:14:04+01:00",
+  "tokens_scanned": 137,
+  "passed": 3,
   "rejections": {
-   "volume 1 h < 20 k$": 44,
-   "liquidité < 150 k$": 78,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 11
+   "liquidité < 150 k$": 80,
+   "volume 1 h < 20 k$": 49,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 5
   },
-  "candidates": [],
+  "candidates": [
+   {
+    "symbol": "FLOAT",
+    "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+    "reason": "momentum"
+   },
+   {
+    "symbol": "fone",
+    "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
+    "reason": "momentum"
+   },
+   {
+    "symbol": "PUMP",
+    "mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+    "reason": "momentum"
+   }
+  ],
   "note": null
  },
  "agents": {
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 133 tokens et de gr3g : aucun nouveau signal ; BIRB et GTA6 suivies, aucune sortie déclenchée",
-   "at": "2026-11-16T20:59:22+01:00",
+   "last_action": "Achat FLOAT et fone (~10 $ chacun, signal momentum)",
+   "at": "2026-11-16T21:14:04+01:00",
    "status": "actif",
    "max_positions": 5
   },
@@ -115,9 +179,9 @@
    "name": "Radar",
    "role": "Veille X, signaux, copy-trade gr3g",
    "last_action": "Scan X + suivi gr3g",
-   "at": "2026-11-16T20:38:00+01:00",
+   "at": "2026-11-16T21:05:00+01:00",
    "detail": "Dernier signal : MOMENTUM CATE (17:45)",
-   "status": "en veille"
+   "status": "actif"
   },
   "garde": {
    "name": "Garde",
@@ -136,8 +200,8 @@
   "sniper": {
    "name": "Sniper",
    "role": "Entrée retardée après migration pump.fun · PAPIER",
-   "last_action": "Scan : 38 migrés 5-60 min, 0 retenu(s)",
-   "at": "2026-11-16T20:58:32+01:00",
+   "last_action": "Scan : 44 migrés 5-60 min, 0 retenu(s)",
+   "at": "2026-11-16T21:12:15+01:00",
    "status": "actif"
   }
  },
@@ -167,16 +231,16 @@
    "paused": false
   },
   "last_scan": {
-   "at": "2026-11-16T20:58:32+01:00",
-   "in_window": 38,
+   "at": "2026-11-16T21:12:15+01:00",
+   "in_window": 44,
    "passed": 0,
    "rejections": {
-    "curve remplie par très peu de trades (bundle probable)": 1,
-    "liquidité < 20 k$": 34,
-    "déjà > +300 % depuis migration": 2,
-    "insiders / bundle détectés": 1
+    "liquidité < 20 k$": 40,
+    "volume 5 min < 5 k$": 2,
+    "insiders / bundle détectés": 1,
+    "déjà > +300 % depuis migration": 1
    },
-   "migrations_seen_65min": 76
+   "migrations_seen_65min": 92
   },
   "open_positions": [],
   "recent_closed": []
@@ -194,6 +258,11 @@
    "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
   },
   {
+   "account": "532WczS5QS1mSi8VUvLcFPGb697wsc8h6TmkyAqUKg5J",
+   "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+   "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+  },
+  {
    "account": "AnpR3PBkJ7uRnXjw43Ttz2ihtwt7gRukPBfS5Ukb2BKC",
    "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
    "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
@@ -201,6 +270,11 @@
   {
    "account": "JMTAmXV2fLQ5brvoo6ELexmSPdJ5MRmqi8GjWisZuX5",
    "mint": "CASHx9KJUStyftLFWGvEVf59SGeG9sh5FfcnZMVPCASH",
+   "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+  },
+  {
+   "account": "7AcVV3Ky8R4ZjMUQvwGMYamffd63QtS2Ct8WR5aNnfcE",
+   "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
    "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
   }
  ],
