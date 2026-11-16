@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Groky Desk · trading Solana en direct</title>
+<meta name="description" content="Tableau de bord temps réel du trading de meme coins Solana de Groky et ses agents.">
+<meta name="theme-color" content="#07090d">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Groky Desk">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://api.dexscreener.com">
+<link rel="preconnect" href="https://solana-rpc.publicnode.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="icons/icon.svg" alt="" width="26" height="26">
+    <span>GROKY<b>DESK</b></span>
+  </div>
+  <div class="live" id="live" title="État des flux">
+    <span class="dot" id="liveDot"></span>
+    <span id="liveLabel">Connexion…</span>
+    <span class="time" id="liveTime">—</span>
+  </div>
+</header>
+<div class="errbar" id="errbar" hidden></div>
+
+<main>
+  <!-- VUE -->
+  <section id="vue" class="card hero">
+    <div class="hero-top">
+      <div>
+        <div class="label">Valeur du wallet</div>
+        <div class="big" id="totalUsd">—</div>
+        <div class="pnl" id="pnlLine"><span id="pnlUsd">—</span> <span id="pnlPct" class="chip">—</span> <span class="muted">vs base <span id="baseUsd">—</span></span></div>
+      </div>
+      <a class="wallet-link" id="walletLink" target="_blank" rel="noopener">Solscan ↗</a>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="label">Solde SOL</div><div class="v" id="solBal">—</div></div>
+      <div class="kpi"><div class="label">Prix SOL</div><div class="v" id="solPx">—</div><div class="sub" id="solChg">—</div></div>
+      <div class="kpi"><div class="label">Positions</div><div class="v" id="posCount">—</div></div>
+      <div class="kpi"><div class="label">Taux de réussite</div><div class="v" id="winRate">—</div><div class="sub" id="realized">—</div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-h">
+      <h2>Courbe de valeur <span class="muted small">(en direct, enregistrée sur cet appareil)</span></h2>
+      <div class="seg" id="rangeSeg">
+        <button data-r="900000">15m</button><button data-r="3600000" class="on">1h</button><button data-r="21600000">6h</button><button data-r="86400000">24h</button><button data-r="0">Tout</button>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="equityChart"></canvas><div class="tip" id="equityTip" hidden></div></div>
+    <div class="legend"><span><i class="lg-line"></i>Valeur ($)</span><span><i class="lg-dash"></i>Base <span id="baseUsd2">—</span></span><span class="muted" id="ptsCount">—</span></div>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><h2>SOL / USD</h2><span class="muted small" id="solPairInfo">—</span></div>
+    <div class="chart-wrap small"><canvas id="solChart"></canvas></div>
+  </section>
+
+  <!-- AGENTS -->
+  <section id="agents" class="card">
+    <div class="card-h"><h2>Les agents</h2><span class="muted small" id="stateAge">state.json : —</span></div>
+    <div class="scene" id="scene">
+      <div class="grid-floor"></div>
+      <div class="zone z-radar"><div class="dish"><div class="sweep"></div></div><span>Veille X</span></div>
+      <div class="zone z-garde"><div class="gate">🛡</div><span>Contrôle</span></div>
+      <div class="zone z-strat"><div class="board"><i></i><i></i><i></i><i></i><i></i></div><span>Analyse</span></div>
+      <div class="zone z-desk"><div class="terminal"><b></b></div><span>Exécution</span></div>
+      <div class="slots" id="slots"></div>
+      <div id="agentLayer"></div>
+    </div>
+    <div class="agent-list" id="agentList"></div>
+  </section>
+
+  <!-- POSITIONS -->
+  <section id="positions" class="card">
+    <div class="card-h"><h2>Positions ouvertes</h2><span class="muted small" id="posRule">—</span></div>
+    <div id="posList"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><h2>Tokens dans le wallet</h2><span class="muted small">lecture on-chain en direct</span></div>
+    <div id="holdList"></div>
+  </section>
+
+  <!-- SCAN -->
+  <section class="card">
+    <div class="card-h"><h2>Dernier scan</h2><span class="muted small" id="scanAt">—</span></div>
+    <div id="scanBox"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><h2>Signaux Radar &amp; Garde</h2></div>
+    <div id="sigList"></div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section id="journal" class="card">
+    <div class="card-h"><h2>Journal des trades</h2><span class="muted small" id="tradeCount">—</span></div>
+    <div id="journalList"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><h2>Règles en vigueur</h2></div>
+    <div class="rules" id="rules"></div>
+    <div class="card-h mt"><h2>Wallets suivis</h2></div>
+    <div id="tracked"></div>
+  </section>
+
+  <section class="card term">
+    <div class="card-h"><h2>Flux en direct</h2><span class="muted small">appels API de cette page</span></div>
+    <pre id="log"></pre>
+  </section>
+
+  <footer>
+    Données : RPC Solana public, DexScreener, et data/state.json publié par les routines.<br>
+    Lecture seule : aucune clé, aucun accès aux fonds.
+  </footer>
+</main>
+
+<nav class="tabbar">
+  <a href="#vue"><span>◎</span>Vue</a>
+  <a href="#agents"><span>◉</span>Agents</a>
+  <a href="#positions"><span>▤</span>Positions</a>
+  <a href="#journal"><span>≡</span>Journal</a>
+</nav>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+{
+ "generated_at": "2026-11-16T18:54:34+01:00",
+ "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
+ "baseline": {
+  "sol": 1.527,
+  "usd": 109.5,
+  "at": "2026-11-16T18:30:00+01:00"
+ },
+ "rules": {
+  "position_usd": 15,
+  "max_positions": 3,
+  "reserve_sol": 0.02,
+  "stop_loss_pct": -20,
+  "take_profit_mult": 1.5,
+  "take_profit_sell_pct": 50,
+  "trailing_stop_pct": -20,
+  "max_slippage_pct": 3,
+  "filters": {
+   "min_liquidity_usd": 500000,
+   "min_age_h": 12,
+   "min_volume_1h_usd": 50000,
+   "mint_freeze_revoked": true,
+   "max_change_1h_pct": 100,
+   "max_holder_pct": 15
+  },
+  "scan_every_min": 15,
+  "signals": [
+   "MOMENTUM",
+   "DIP",
+   "COPY-TRADE"
+  ]
+ },
+ "positions": [],
+ "journal": [],
+ "stats": {
+  "trades": 0,
+  "closed": 0,
+  "wins": 0,
+  "losses": 0,
+  "win_rate": null,
+  "realized_pnl_usd": null
+ },
+ "last_scan": null,
+ "agents": {
+  "groky": {
+   "name": "Groky",
+   "role": "Exécute les trades · scan /15 min",
+   "last_action": "Aucun trade pour l'instant",
+   "at": null,
+   "status": "inconnu"
+  },
+  "radar": {
+   "name": "Radar",
+   "role": "Veille X, signaux, copy-trade gr3g",
+   "last_action": "Scan X + suivi gr3g",
+   "at": "2026-11-16T18:40:00+01:00",
+   "detail": "Dernier signal : MOMENTUM CATE (17:45)",
+   "status": "actif"
+  },
+  "garde": {
+   "name": "Garde",
+   "role": "Analyse de risque, valide les signaux",
+   "last_action": null,
+   "at": null,
+   "status": "inconnu"
+  },
+  "stratege": {
+   "name": "Stratège",
+   "role": "Performance, revue hebdo",
+   "last_action": null,
+   "at": null,
+   "status": "inconnu"
+  }
+ },
+ "signals": [
+  {
+   "from": "Radar",
+   "type": "MOMENTUM",
+   "symbol": "CATE",
+   "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+   "at": "2026-11-16T17:45:00+01:00",
+   "to": "Garde (via parent)",
+   "verdict": null
+  }
+ ],
+ "tracked_wallets": [
+  {
+   "name": "gr3g",
+   "address": "J23qr98GjGJJqKq9CBEnyRhHbmkaVxtTJNNxKu597wsA"
+  }
+ ],
+ "token_accounts": [
+  {
+   "account": "JMTAmXV2fLQ5brvoo6ELexmSPdJ5MRmqi8GjWisZuX5",
+   "mint": "CASHx9KJUStyftLFWGvEVf59SGeG9sh5FfcnZMVPCASH",
+   "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+  }
+ ],
+ "token_accounts_source": "helius"
+}
