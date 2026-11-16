@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T23:20:33+01:00",
+ "generated_at": "2026-11-16T23:22:31+01:00",
  "wallet": "4sPACuXcJ3ssYURkuyxHDUsDh39WpEdreDxus2B969rB",
  "baseline": {
   "sol": 1.527,
@@ -78,7 +78,7 @@
    "entry_usd": 10.0,
    "entry_sol": 0.1397,
    "amount_tokens": null,
-   "peak_price_usd": 0.0009089,
+   "peak_price_usd": 0.0009103,
    "half_sold": false,
    "signal": "momentum",
    "pair_url": null
@@ -257,15 +257,13 @@
   "realized_pnl_usd": -3.76
  },
  "last_scan": {
-  "at": "2026-11-16T23:20:32+01:00",
-  "tokens_scanned": 137,
+  "at": "2026-11-16T23:22:31+01:00",
+  "tokens_scanned": 138,
   "passed": 0,
   "rejections": {
-   "liquidité < 150 k$": 83,
    "volume 1 h < 20 k$": 43,
-   "pas de momentum (baisse 1 h ou plus de vendeurs)": 9,
-   "déjà en portefeuille": 1,
-   "wallet hors pool > 15 % de l'offre": 1
+   "liquidité < 150 k$": 84,
+   "pas de momentum (baisse 1 h ou plus de vendeurs)": 9
   },
   "candidates": [],
   "note": null
@@ -274,8 +272,8 @@
   "groky": {
    "name": "Groky",
    "role": "Exécute les trades · scan /15 min",
-   "last_action": "Scan de 137 tokens : 8/8 positions, aucun stop ni prise de profit, pas de place pour un nouvel achat",
-   "at": "2026-11-16T23:20:32+01:00",
+   "last_action": "Scan de 138 tokens : 8/8 positions, aucun stop ni prise de profit, pas de place pour un nouvel achat",
+   "at": "2026-11-16T23:22:31+01:00",
    "status": "actif",
    "max_positions": 8
   },
